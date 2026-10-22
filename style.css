@@ -1,0 +1,57 @@
+/* Styling Dasar */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+/* Sembunyikan Semua Tab Konten Secara Default */
+.tab-pane {
+    display: none;
+}
+
+/* Logika Pure CSS Tab Switching Berdasarkan Radio Button */
+#tab-radio-beranda:checked ~ main #content-beranda {
+    display: block;
+}
+
+#tab-radio-buat:checked ~ main #content-buat {
+    display: block;
+}
+
+#tab-radio-lacak:checked ~ main #content-lacak {
+    display: block;
+}
+
+#tab-radio-admin:checked ~ main #content-admin {
+    display: block;
+}
+
+/* Indikator Navigasi Aktif Menggunakan Pure CSS */
+#tab-radio-beranda:checked ~ header #lbl-beranda,
+#tab-radio-buat:checked ~ header #lbl-buat,
+#tab-radio-lacak:checked ~ header #lbl-lacak,
+#tab-radio-admin:checked ~ header #lbl-admin {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+/* Toggle Menu Mobile Menggunakan Pure CSS Checkbox */
+#toggle-mobile:checked ~ #mobile-menu-box {
+    display: block;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
